@@ -1,0 +1,299 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top:  1rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+/* Variables */
+:root {
+    --main-color: #d90429;
+    --text-color: #020102;
+    --bg-color:   #fff;
+    --timnhe-color: #593e67;
+    --naunhe-color: #84495f;
+}
+section{
+    padding: 4rem 0 2rem;
+}
+img {
+    width: 100%;
+}
+body {
+    color: var(--text-color);
+}
+.container{
+    
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 35px;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
+}
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.logo span {
+    color: var(--text-color);
+    font-size: 25px;
+}
+.navbar {
+    display: flex;
+    column-gap: 2rem;
+}
+.navbar a {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
+}
+.search{
+    display: flex;
+}
+#search-icon{
+    font-size: 24px;
+    cursor: pointer;
+}
+.bx-search{
+    margin: 0px;
+    padding: 10px 10px;
+}
+.search-box {
+    position: relative;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background: var(--bg-color);
+    box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    clip-path: circle(0% at 100% 0%);
+}
+.search-box.active{
+    clip-path: circle(144% at 100% 0%);
+    transition: 0.4s;
+}
+.search-box input[type="search"] {
+    width: 350px; /* Chiều rộng 100% của hộp tìm kiếm */
+    padding: 10px; /* Padding cho input */
+    font-size: 1rem; /* Cỡ chữ trong ô tìm kiếm */
+    border: 1px solid #ccc; /* Viền cho input */
+    border-radius: 5px; /* Bo tròn các góc của input */
+    outline: none; /* Loại bỏ viền khi input được chọn */
+    background-color: #f9f9f9; /* Màu nền của input */
+}
+.home{
+    margin: auto;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: url(images/Lamborghini\ Huracan.jpg); /*Ảnh nền giao diện web */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+
+}
+.home-text{
+    padding-left: 130px;
+}
+.home text h1{
+    font-size: 2.4rem;
+}
+.home-text span{
+    color: var(--text-color);
+}
+.home-text p{
+    font-size: 0.938rem;
+    font-weight: 300;
+    margin: 0.5rem 0 .12rem;
+    color: var(--bg-color);
+}
+.btn{
+    padding: 0.5px 10px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 400;
+}
+.btn :hover{
+    background: #020102;
+}
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-weight: 500;
+}
+.heading p{
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+.cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: space-between; /* Giúp căn chỉnh các box đều nhau */
+}
+
+.cars-container .box {
+    flex: 1 1 17rem; /* Set chiều rộng tối thiểu là 17rem, phần tử sẽ co giãn */
+    position: relative;
+    height: auto; /* Thay đổi từ height: 200px thành auto để chiều cao tự động dựa trên nội dung */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #f5f5f5; /* Thêm màu nền để dễ nhìn */
+    padding: 1rem; /* Thêm padding cho nội dung bên trong */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng thể */
+}
+
+.cars-container .box h3 {
+    font-size: 1.5rem; /* Chỉnh kích thước chữ cho tiêu đề */
+    margin-bottom: 1rem; /* Khoảng cách dưới tiêu đề */
+}
+
+.cars-container .box p {
+    font-size: 1rem; /* Chỉnh kích thước chữ cho đoạn mô tả */
+    color: #555;
+}
+.cars-container .box img {
+    transition: transform 0.5s ease; /* Thiết lập thời gian và hiệu ứng chuyển tiếp */
+}
+
+.cars-container .box img:hover {
+    transform: scale(1.05); /* Phóng to ảnh 5% khi hover (chạm vào) */
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img{
+    flex: 1 1 21rem;
+}
+.about-text{
+    flex: 1 1 21rem;
+}
+.about-text span{
+    font-weight: 500;
+    color: var(--text-color);
+}
+.about-text h2{
+    font-size: 1.7rem;
+}
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+}
+/* Styling cho nút */
+.btn {
+    display: inline-block; /* Hiển thị nút dưới dạng inline-block */
+    padding: 1rem 2rem; /* Kích thước nút */
+    background-color: #090909; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    text-align: center; /* Căn giữa văn bản */
+    text-decoration: none; /* Loại bỏ gạch dưới của link */
+    border: 2px solid #090909; /* Màu của khung (border) */
+    border-radius: 0.5rem; /* Bo góc cho nút */
+    font-size: 1.2rem; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp khi hover hoặc active */
+}
+
+/* Khi hover (di chuột qua) */
+.btn:hover {
+    background-color: #090909; /* Thay đổi màu nền khi hover */
+    border-color: #090909; /* Thay đổi màu khung khi hover */
+}
+
+/* Khi nút được nhấn (click) */
+.btn:active {
+    transform: scale(0.98); /* Giảm kích thước nút khi nhấn */
+    background-color: #090909; /* Thay đổi màu nền khi nhấn */
+    border-color: #090909; /* Thay đổi màu khung khi nhấn */
+}
+.parts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.parts-container .box {
+    flex: 1 1 17rem;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    border-radius: 0.5rem;
+}
+
+.parts-container .box img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.parts-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.parts-container .box span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.parts-container .box .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #020102; /* Màu nền cho nút */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #020102; /* Khung của nút */
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+    margin-top: auto; /* Đẩy nút xuống dưới cùng của box */
+}
+
+/* Khi hover lên nút */
+.parts-container .box .btn:hover {
+    background-color: #020102; 
+}
